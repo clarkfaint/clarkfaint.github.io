@@ -134,17 +134,29 @@
         SYSTEM NOMINAL // WEB PORTFOLIO DEPLOYED AT <a href="https://github.com" class="text-gray-400 hover:underline">://github.com</a>
     </footer>
 
-    <!-- REAL-TIME CLOCK -->
+      <!-- REAL-TIME CLOCK (CENTRAL TIME ALIGNED) -->
     <script>
         function updateClock() {
             const clockEl = document.getElementById('noc-clock');
             if (clockEl) {
                 const now = new Date();
-                clockEl.textContent = now.toISOString().slice(11, 19) + ' UTC';
+                
+                // Format time explicitly for America/Chicago (Central Time)
+                const options = {
+                    timeZone: 'America/Chicago',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: false
+                };
+                
+                const centralTime = now.toLocaleTimeString('en-US', options);
+                clockEl.textContent = centralTime + ' CT';
             }
         }
         setInterval(updateClock, 1000);
         updateClock();
     </script>
+
 </body>
 </html>
