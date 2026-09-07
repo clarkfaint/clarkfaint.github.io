@@ -1,7 +1,149 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clark Faint | Systems & Network Portfolio</title>
+    <script src="https://tailwindcss.com"></script>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'Fira Code', monospace; }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col antialiased">
+
+    <!-- HEADER NAVIGATION -->
+    <header class="border-b border-gray-800 bg-gray-900/40 backdrop-blur px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-3">
+            <div class="h-2.5 w-2.5 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_#22c55e]"></div>
+            <div>
+                <h1 class="text-base font-bold tracking-wider mono text-green-400">CLARK_FAINT // NOC_PORTFOLIO</h1>
+                <p class="text-xs text-gray-400">IT Consultant & Systems Specialist</p>
+            </div>
+        </div>
+        
+        <div class="flex items-center gap-4 mono text-xs text-gray-400 bg-gray-950 px-3 py-1.5 rounded border border-gray-800">
+            <div>HOST_NODE: <span class="text-blue-400 font-semibold">FEDORA_44</span></div>
+            <div class="hidden md:block">SYS_STATUS: <span class="text-green-400 font-semibold">ONLINE</span></div>
+            <div>TIME: <span id="noc-clock" class="text-gray-200">00:00:00 UTC</span></div>
+        </div>
+    </header>
+
+    <!-- CONTAINER GRID -->
+    <main class="flex-grow p-6 max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- SIDEBAR MODULES -->
+        <section class="lg:col-span-1 space-y-6">
+            <!-- Profile Brief -->
+            <div class="bg-gray-900/20 border border-gray-800 rounded-lg p-6">
+                <h2 class="text-xs font-semibold tracking-wider text-gray-500 uppercase mb-3 mono">// PROFILE_SUMMARY</h2>
+                <h3 class="text-xl font-bold text-white mb-2">Clark Faint</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                    Systems professional specializing in local virtualization layouts, containerized platform networks, split-horizon DNS routing configurations, and secure environment topologies.
+                </p>
+                <div class="space-y-2 text-xs mono border-t border-gray-900 pt-3">
+                    <div class="flex justify-between border-b border-gray-800/40 py-1">
+                        <span class="text-gray-500">BASE_LOCATION:</span>
+                        <span class="text-gray-300">San Antonio, TX</span>
+                    </div>
+                </div>
+                
+                <!-- Navigation Hub -->
+                <div class="mt-5 grid grid-cols-2 gap-3">
+                    <a href="https://www.linkedin.com/in/clark-faint/" target="_blank" class="flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold py-2 px-3 rounded transition-colors text-center">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/clarkfaint" target="_blank" class="flex items-center justify-center bg-gray-800 hover:bg-gray-700 text-gray-200 text-xs font-semibold py-2 px-3 rounded transition-colors border border-gray-700 text-center">
+                        GitHub Profile
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certifications Status -->
+            <div class="bg-gray-900/20 border border-gray-800 rounded-lg p-6">
+                <h2 class="text-xs font-semibold tracking-wider text-gray-500 uppercase mb-3 mono">// TECHNICAL_VALIDATION</h2>
+                <div class="space-y-3 text-sm">
+                    <div class="p-3 bg-green-950/10 border border-green-900/40 rounded flex justify-between items-center">
+                        <div>
+                            <h4 class="font-bold text-white text-xs">CompTIA A+ Core 1</h4>
+                            <p class="text-[11px] text-green-400 mono">VERIFIED SCORE: 775/900</p>
+                        </div>
+                        <span class="bg-green-500/10 text-green-400 text-[9px] font-bold px-1.5 py-0.5 rounded border border-green-500/20 mono">PASSED</span>
+                    </div>
+                    <div class="p-3 bg-gray-950/60 border border-gray-800 rounded">
+                        <h4 class="font-bold text-gray-300 text-xs">CompTIA Roadmap</h4>
+                        <p class="text-[11px] text-gray-500 mono">CompTIA A+ Core 2, Network+ & Security+ In Progress</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN DEPLOYMENT MODULE -->
+        <section class="lg:col-span-2 space-y-6">
+            <div class="bg-gray-900/20 border border-gray-800 rounded-lg p-6 flex flex-col h-full">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h2 class="text-xs font-semibold tracking-wider text-gray-500 uppercase mono">// ARCHITECTURAL_LABS</h2>
+                        <h3 class="text-lg font-bold text-white mt-1">Active Environments</h3>
+                    </div>
+                    <a href="https://github.com/my-first-homelab" target="_blank" class="text-xs text-green-400 hover:underline mono">
+                        VIEW_CODE_→
+                    </a>
+                </div>
+                
+                <!-- Homelab Details -->
+                <div class="bg-gray-950 border border-gray-800 rounded-lg p-5">
+                    <h4 class="font-bold text-white text-base">Project: my-first-homelab</h4>
+                    <p class="text-xs text-gray-400 mt-2 mb-4 leading-relaxed">
+                        A containerized application infrastructure running on localized server hardware via Fedora Workstation 44. Integrates isolated reverse proxy layers, centralized administration dashboard modules, and private encryption backplanes.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs mono text-gray-400 border-t border-gray-900 pt-3">
+                        <div class="p-3 bg-gray-900/40 rounded border border-gray-900/50">
+                            <span class="text-gray-500 block text-[10px] font-semibold">// ROUTING_ZONE</span>
+                            Split-Horizon Wildcard Routing via Pi-hole configurations (<code class="text-blue-400">*.homelab.internal</code>)
+                        </div>
+                        <div class="p-3 bg-gray-900/40 rounded border border-gray-900/50">
+                            <span class="text-gray-500 block text-[10px] font-semibold">// SECURITY_LAYER</span>
+                            Zero-Trust mesh administration tunnel overlay routing via native Tailscale daemons.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engineering Lifecycle Lifecycle -->
+                <div class="mt-4 p-4 bg-gray-950/50 border border-dashed border-gray-800 rounded-lg">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-xs font-bold text-gray-400 mono">// DECOMMISSION_RUNBOOK</h4>
+                        <span class="text-[9px] bg-red-500/10 text-red-400 px-1.5 py-0.5 rounded border border-red-500/20 mono">ARCHIVED</span>
+                    </div>
+                    <h5 class="text-xs font-bold text-gray-500 mt-1">osTicket App Stack</h5>
+                    <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">
+                        Container data stores successfully cleared and unmounted. Stack assets deliberately reallocated to enterprise cloud architecture simulators to align with modern corporate ticketing standards.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER BANNER -->
+    <footer class="border-t border-gray-800 bg-gray-950 px-6 py-4 text-center text-xs text-gray-500 mono">
+        SYSTEM NOMINAL // WEB PORTFOLIO DEPLOYED AT <a href="https://github.com" class="text-gray-400 hover:underline">://github.com</a>
+    </footer>
+
+    <!-- REAL-TIME CLOCK -->
+    <script>
+        function updateClock() {
+            const clockEl = document.getElementById('noc-clock');
+            if (clockEl) {
+                const now = new Date();
+                clockEl.textContent = now.toISOString().slice(11, 19) + ' UTC';
+            }
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
 </body>
 </html>
